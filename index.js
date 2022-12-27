@@ -1,4 +1,5 @@
 function playRound (computerSelection, playerSelection) {
+    console.log(`You: ${playerSelection}, Computer: ${computerSelection}`);
     if(computerSelection === playerSelection){
         return `It's a TIE! You both played ${playerSelection}`;
     } else if( computerSelection === "rock" && playerSelection === "paper"){
@@ -22,6 +23,8 @@ function getComputerChoice() {
     return arr[Math.round(Math.random() * 2)];
 }
 
-const playerSelection = "rock";
+const playerSelection = prompt("What's your move? - rock, paper or scissors");
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+console.log(`YouB: ${playerSelection}, ComputerB: ${computerSelection}`);
+
+console.log(playRound(computerSelection, playerSelection));
