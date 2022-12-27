@@ -1,8 +1,17 @@
+function playRound (computerSelection, playerSelection) {
+    if(computerSelection == playerSelection){
+        return "It's a TIE!"
+    } else {
+        return "Add logic"
+    }
+}
+
+
 function getComputerChoice() {
     let arr = ["rock","paper","scissors"];
-    // console.log(arr[Math.round(Math.random() * 2)]);
     return arr[Math.round(Math.random() * 2)];
 }
 
-getComputerChoice();
-// console.log(getComputerChoice());
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
